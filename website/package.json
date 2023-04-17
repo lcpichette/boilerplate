@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"prepare": "svelte-kit sync",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -37,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^2.0.2",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.3"
 	}
