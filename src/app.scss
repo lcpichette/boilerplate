@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600&display=swap');
+@import 'vars.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: theme('colors.white');
+    color: theme('colors.black');
+    font-size: $font-size;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding: 80px;
+    @apply font-body;
+}
+
+.site-margins {
+    @apply px-4 md:px-8 lg:px-16;
+}
+
+/* No use of: h5,h6 */
+h1, h2, h3, h4 {
+    @apply font-bold;
+}
+h1, h2 {
+    font-size: 1.3rem;
+    @apply font-title;
+}
+
+.bottom-shadow {
+    box-shadow: 0 14px 28px -28px rgba(0,0,0,0.25), 0 10px 10px -10px rgba(0,0,0,0.22);
+}
+
+img.icon {
+    opacity: 0.8;
+}
+img.icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hover Underline */
+.hover-underline {
+    &-white {
+        color: inherit;
+        text-decoration: none;
+        box-sizing: border-box;
+        background:
+                linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+        background-size: 100% 0.1em, 0 0.1em;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+    }
+
+    &-white:hover,
+    &-white:focus {
+        background-size: 0 0.1em, 100% 0.1em;
+    }
+
+    &-accent {
+        color: inherit;
+        text-decoration: none;
+        box-sizing: border-box;
+        background: 
+            linear-gradient(to right, rgba(60, 30, 90, 0.5), rgba(60, 30, 90, 0.5)), 
+            linear-gradient(to right, rgba(60, 30, 90, 1), rgba(60, 30, 90, 1));
+        background-size: 100% 0.1em, 0 0.1em;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms;
+    }
+
+    &-accent:hover,
+    &-accent:focus {
+        background-size: 0 0.1em, 100% 0.1em;
+    }
+}
+
+/* Confetti */
+@keyframes bang {
+    from {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+i.confetti {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 8px;
+    background: red;
+    opacity: 0;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Lora;
+}
+@font-face {
+    font-family: Lora;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+} @font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 800;
+}
